@@ -1,0 +1,1 @@
+.sections{display:flex;flex-direction:column}.toxic{color:#030;background-color:#b8e0b8}.stopWord{color:#300;background-color:#e0b8b8}.resultBox{display:flex;width:100%;justify-content:space-around}.stopResult{border:1px solid red}.stopResult,.toxicResult{width:47%;min-height:30px}.toxicResult{border:1px solid green}

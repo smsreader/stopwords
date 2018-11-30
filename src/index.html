@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html lang="ru">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Стоп-слова</title>
+	<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+	<link href="https://fonts.googleapis.com/css?family=Forum" rel="stylesheet">
+</head>
+<body>
+	<form class="sections" name="checkWords">
+		<h2>Сюда текст</h2>
+		<textarea cols="10" rows="15" name="inputText"></textarea>
+		<div class='resultBox'>
+			<div class='stopResult'></div>
+			<div class='toxicResult'></div>
+		</div>
+	</form>
+	<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>
+

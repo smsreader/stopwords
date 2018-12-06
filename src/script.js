@@ -2,8 +2,8 @@ import {stopWordsArray} from './scripts/stopwords';
 import {toxicWordsArray} from './scripts/toxicwords';
 
 const myForm = document.forms[0];
-const stopResult = document.querySelector('.stopResult');
-const toxicResult = document.querySelector('.toxicResult');
+const result__stop = document.querySelector('.result__stop');
+const result__toxic = document.querySelector('.result__toxic');
 const stopBtn = document.querySelector('.stopBtn');
 const toxicBtn = document.querySelector('.toxicBtn');
 
@@ -40,19 +40,19 @@ myForm.elements.inputText.addEventListener('input', function(){
     let newString = "";
     let textToCheck = myForm.elements.inputText.value;
     for (let j = 0; j < stopWordsArray.length; j++) {
-        newString = checkWord(textToCheck, stopWordsArray[j], 'stopWord');
+        newString = checkWord(textToCheck, stopWordsArray[j], 'word--stop');
         textToCheck = newString;
     }
-    stopResult.innerHTML = newString;
+    result__stop.innerHTML = newString;
 });
 myForm.elements.inputText.addEventListener('input', function(){
     let newString = "";
     let textToCheck = myForm.elements.inputText.value;
     for (let j = 0; j < toxicWordsArray.length; j++) {
-        newString = checkWord(textToCheck, toxicWordsArray[j], 'toxic');
+        newString = checkWord(textToCheck, toxicWordsArray[j], 'word--toxic');
         textToCheck = newString;
     }
-    toxicResult.innerHTML = newString;
+    result__toxic.innerHTML = newString;
 });
 let str = 'Stop Word & Expression Validator 2.0';
 console.log ( '%c%s', 'color: green; font: 14px/1 Tahoma;', str );

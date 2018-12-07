@@ -29,7 +29,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin('dist', {} ),
+    new CleanWebpackPlugin('build', {} ),
     new MiniCssExtractPlugin({
       filename: 'style.[contenthash].css',
     }),

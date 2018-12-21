@@ -16,6 +16,12 @@ h2 {
     font-size: 20px;
 }
 
+.headers {
+    position: sticky;
+    top: 1px;
+    background-color: #fff;
+}
+
 .father {
     padding: 0 200px;
 }
